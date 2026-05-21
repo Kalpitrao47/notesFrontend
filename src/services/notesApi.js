@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:6969";
+const BASE_URL = "http://notes-backend-pearl-alpha.vercel.app";
 
 export const getNotes = async () => {
   const response = await fetch(`${BASE_URL}/notes/list`);
@@ -42,7 +42,7 @@ export const createNote = async ({
 
 export const updateNote = async (_id, noteData) => {
   const response = await fetch(
-    `http://localhost:6969/update/notes/${_id}`,
+    `http://notes-backend-pearl-alpha.vercel.app/update/notes/${_id}`,
     {
       method: "PUT",
       headers: {
@@ -62,7 +62,7 @@ export const updateNote = async (_id, noteData) => {
 };
 
 export const permanentDelete = async (_id) => {
-  const response = await fetch(`http://localhost:6969/delete/notes/${_id}`, {
+  const response = await fetch(`http://notes-backend-pearl-alpha.vercel.app/delete/notes/${_id}`, {
     method: "DELETE",
   });
 
